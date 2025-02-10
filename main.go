@@ -1,10 +1,16 @@
 package main
 
 import (
+	"github.com/ApirakPhuphanphet/Go-Blogs/db"
+	"github.com/ApirakPhuphanphet/Go-Blogs/model"
 	"github.com/gofiber/fiber/v2"
 )
 
 func main() {
+
+	database := db.DatabaseConnection()
+	database.AutoMigrate(&model.User{})
+
 	app := fiber.New()
 
 	routeHandler(app)

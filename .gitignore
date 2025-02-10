@@ -4,3 +4,5 @@ tmp/
 # ignore .air.toml file
 .air.toml
 
+# ignore .env file
+.env
